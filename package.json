@@ -1,5 +1,5 @@
 {
-  "name": "calculator-project",
+  "name": "deploy-heroku",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

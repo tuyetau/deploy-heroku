@@ -11,10 +11,10 @@ const forceSSL = function () {
     next();
   };
 };
-app.use(express.static('./dist/calculator-project'));
+app.use(express.static('./dist/deploy-heroku'));
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join('ePortfolio', '/dist/calculator-project/index.html'));
+  res.sendFile(path.join('ePortfolio', '/dist/deploy-heroku/index.html'));
 });
 
 app.use(forceSSL());

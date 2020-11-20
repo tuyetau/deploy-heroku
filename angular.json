@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "calculator-project": {
+    "deploy-heroku": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,19 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/calculator-project",
+            "outputPath": "dist/deploy-heroku",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -66,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "calculator-project:build"
+            "browserTarget": "deploy-heroku:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "calculator-project:build:production"
+              "browserTarget": "deploy-heroku:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "calculator-project:build"
+            "browserTarget": "deploy-heroku:build"
           }
         },
         "test": {
@@ -87,13 +82,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -105,27 +95,25 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "calculator-project:serve"
+            "devServerTarget": "deploy-heroku:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "calculator-project:serve:production"
+              "devServerTarget": "deploy-heroku:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "calculator-project",
+  "defaultProject": "deploy-heroku",
   "cli": {
     "analytics": "386834d2-b659-4264-a652-12e4581d386e"
   }

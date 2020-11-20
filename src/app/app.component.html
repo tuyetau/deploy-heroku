@@ -1,0 +1,28 @@
+<body>
+  <div class="calculator">
+    <div class="head" id="head">
+      <p class="input">{{ subText }}<br />{{ mainText }}</p>
+    </div>
+    <div class="main">
+      <button class="btn op" id="clear" value="AC" (click)="clearAll()">
+        AC
+      </button>
+      <button class="btn num" value="7" (click)="pressKey('7')">7</button>
+      <button class="btn num" value="8" (click)="pressKey('8')">8</button>
+      <button class="btn num" value="9" (click)="pressKey('9')">9</button>
+      <button class="btn ope" value="/" (click)="pressKey('/')">/</button>
+      <button class="btn num" value="4" (click)="pressKey('4')">4</button>
+      <button class="btn num" value="5" (click)="pressKey('5')">5</button>
+      <button class="btn num" value="6" (click)="pressKey('6')">6</button>
+      <button class="btn ope" value="*" (click)="pressKey('*')">*</button>
+      <button class="btn num" value="1" (click)="pressKey('1')">1</button>
+      <button class="btn num" value="2" (click)="pressKey('2')">2</button>
+      <button class="btn num" value="3" (click)="pressKey('3')">3</button>
+      <button class="btn ope" (click)="pressKey('-')">-</button>
+      <button class="btn" (click)="pressKey('.')">.</button>
+      <button class="btn num" value="0" (click)="pressKey('0')">0</button>
+      <button class="btn equal" (click)="evaluate()">=</button>
+      <button class="btn ope" (click)="pressKey('+')">+</button>
+    </div>
+  </div>
+</body>
